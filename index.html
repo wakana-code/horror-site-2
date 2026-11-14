@@ -61,7 +61,7 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 /* results */
 .r-head{display:flex;align-items:center;padding:22px 0 0 28px;flex-wrap:wrap;gap:8px}
 .r-logo{width:120px;flex:none;margin-right:28px}
-.r-box{width:692px;max-width:calc$100vw - 40px$}
+.r-box{width:692px;max-width:calc(100vw - 40px)}
 .r-right{margin-left:auto;display:flex;align-items:center;gap:6px;padding-right:20px;position:relative}
 .r-tabs{display:flex;gap:2px;padding-left:176px;margin-top:10px;border-bottom:1px solid #ebebeb;font-size:14px;overflow-x:auto}
 .r-tabs a{padding:12px 12px 9px;color:#5f6368;border-bottom:3px solid transparent;white-space:nowrap}
@@ -117,7 +117,7 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 .pager b{font-weight:500}
 .r-foot{background:#f2f2f2;color:#70757a;font-size:14px;padding:14px 0 14px 176px;line-height:2}
 .r-foot a{color:#4d5156;margin-right:22px}
-.img-grid{display:grid;grid-template-columns:repeat$auto-fill,minmax(170px,1fr)$;gap:14px;max-width:900px}
+.img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;max-width:900px}
 .img-grid div{border-radius:10px;height:150px;display:flex;align-items:flex-end;padding:8px;color:#fff;font-size:12px;text-shadow:0 1px 2px #000}
 
 /* chrome error */
@@ -195,7 +195,7 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 .x-tabs{display:flex;border-bottom:1px solid #2f3336;position:sticky;top:0;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);z-index:5}
 .x-tabs div{flex:1;text-align:center;padding:16px 0;color:#71767b;font-weight:500;cursor:pointer;position:relative;font-size:15px}
 .x-tabs div.on{color:#e7e9ea;font-weight:700}
-.x-tabs div.on::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX$-50%$;width:56px;height:4px;border-radius:2px;background:#1d9bf0}
+.x-tabs div.on::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:56px;height:4px;border-radius:2px;background:#1d9bf0}
 .x-hd{padding:14px 16px;font-size:20px;font-weight:700;border-bottom:1px solid #2f3336;position:sticky;top:0;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);z-index:5}
 .x-comp{display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid #2f3336}
 .x-comp textarea{width:100%;background:none;border:none;outline:none;color:#e7e9ea;font-size:20px;resize:none;font-family:inherit;min-height:56px;padding-top:6px}
@@ -242,8 +242,8 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 .x-prof h2{margin:10px 0 0;font-size:20px}
 .x-prof .meta{color:#71767b;font-size:15px;margin:10px 0}
 .ntf-row{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid #2f3336;font-size:15px}
-@media$max-width:1100px${.x-right{display:none}}
-@media$max-width:800px${.x-nav .lbl,.x-me div,.x-post-btn{display:none}.x-nav{width:76px}}
+@media (max-width:1100px){.x-right{display:none}}
+@media (max-width:800px){.x-nav .lbl,.x-me div,.x-post-btn{display:none}.x-nav{width:76px}}
 
 /* ===== ChatGPT ===== */
 .gpt{display:flex;height:100vh;background:#fff;color:#0d0d0d;font-family:"Söhne",ui-sans-serif,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif}
@@ -308,7 +308,7 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 #fx>*{pointer-events:auto}
 .ov{position:fixed;inset:0;z-index:9500}
 .blackout{background:#000;cursor:none}
-.bo-text{position:absolute;left:50%;top:50%;transform:translate$-50%,-50%$;color:#ddd;font-family:"MS Gothic",Osaka,monospace;font-size:14px;opacity:0;transition:opacity 2s;letter-spacing:.35em;text-align:center;white-space:pre-line}
+.bo-text{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#ddd;font-family:"MS Gothic",Osaka,monospace;font-size:14px;opacity:0;transition:opacity 2s;letter-spacing:.35em;text-align:center;white-space:pre-line}
 .bo-caret{position:absolute;left:12px;top:10px;color:#c0c0c0;font-family:Consolas,monospace;font-size:20px;animation:caret 1s steps(1) infinite}
 @keyframes caret{50%{opacity:0}}
 .bsod{background:#0078d7;color:#fff;font-family:"Segoe UI","Yu Gothic UI",Meiryo,sans-serif;padding:10vh 11vw;cursor:none}
@@ -320,7 +320,7 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 .macp .box{background:rgba(25,25,25,.92);color:#ddd;padding:34px 44px;border-radius:12px;font-family:-apple-system,"Hiragino Sans",sans-serif;text-align:center;line-height:1.9;max-width:560px;font-size:15px}
 .macp .pw{font-size:46px;margin-bottom:10px}
 .boot{background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:70px;color:#fff;cursor:none;font-family:"Segoe UI",sans-serif}
-.winlogo{display:grid;grid-template-columns:1fr 1fr;gap:5px;width:110px;height:110px;transform:perspective(300px) rotateY$-14deg$}
+.winlogo{display:grid;grid-template-columns:1fr 1fr;gap:5px;width:110px;height:110px;transform:perspective(300px) rotateY(-14deg)}
 .winlogo i{background:#0078d7}
 .wspin{position:relative;width:46px;height:46px}
 .wspin i{position:absolute;inset:0;animation:wsp 2.6s infinite cubic-bezier(.5,.15,.5,.85)}
@@ -329,10 +329,10 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 @keyframes wsp{0%{transform:rotate(0);opacity:1}75%{transform:rotate(720deg);opacity:1}76%,100%{opacity:0;transform:rotate(720deg)}}
 .apbar{width:220px;height:5px;background:#333;border-radius:3px;overflow:hidden}
 .apbar i{display:block;height:100%;background:#fff;width:0;transition:width 6s linear}
-.inst{position:fixed;left:50%;top:50%;transform:translate$-50%,-50%$;width:520px;max-width:94vw;background:#fff;border:1px solid #7a7a7a;box-shadow:0 12px 40px rgba(0,0,0,.45);font-family:"Segoe UI","Yu Gothic UI",Meiryo,sans-serif;font-size:13px;z-index:9600;color:#000}
+.inst{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;max-width:94vw;background:#fff;border:1px solid #7a7a7a;box-shadow:0 12px 40px rgba(0,0,0,.45);font-family:"Segoe UI","Yu Gothic UI",Meiryo,sans-serif;font-size:13px;z-index:9600;color:#000}
 .inst.mac{border-radius:10px;overflow:hidden;font-family:-apple-system,"Hiragino Sans",sans-serif}
 .inst.shake{animation:shake .3s}
-@keyframes shake{0%,100%{transform:translate$-50%,-50%$}25%{transform:translate$calc(-50% - 9px),-50%$}75%{transform:translate$calc(-50% + 9px),-50%$}}
+@keyframes shake{0%,100%{transform:translate(-50%,-50%)}25%{transform:translate(calc(-50% - 9px),-50%)}75%{transform:translate(calc(-50% + 9px),-50%)}}
 .inst-tb{height:32px;display:flex;align-items:center;padding-left:10px;gap:8px;user-select:none}
 .inst.mac .inst-tb{background:#ececec;border-bottom:1px solid #d0d0d0}
 .inst-tb .t{flex:1;font-size:12px}
@@ -343,7 +343,7 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 .tl.r{background:#ff5f57}.tl.y{background:#febc2e}.tl.g{background:#28c840}
 .inst-bd{padding:18px 22px 14px}
 .inst-h{display:flex;gap:14px;align-items:center;font-size:15px;margin-bottom:16px}
-.ci{width:34px;height:34px;border-radius:50%;background:conic-gradient$from -30deg,#db4437 0 120deg,#f4b400 0 240deg,#0f9d58 0$;position:relative;flex:none}
+.ci{width:34px;height:34px;border-radius:50%;background:conic-gradient(from -30deg,#db4437 0 120deg,#f4b400 0 240deg,#0f9d58 0);position:relative;flex:none}
 .ci::after{content:"";position:absolute;inset:30%;border-radius:50%;background:#4285f4;box-shadow:0 0 0 2px #fff}
 .ci.eyei{background:#000}
 .ci.eyei::after{background:#8b0000;inset:28%}
@@ -361,7 +361,7 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 .ntf .bd{font-size:13px;color:#ddd;line-height:1.5}
 .ntf.mac{top:12px;bottom:auto;background:rgba(242,242,242,.9);color:#000;backdrop-filter:blur(20px);border-radius:16px;width:344px;font-family:-apple-system,"Hiragino Sans",sans-serif}
 .ntf.mac .app{color:#666}.ntf.mac .bd{color:#333}
-.nic{width:16px;height:16px;border-radius:50%;background:conic-gradient$from -30deg,#db4437 0 120deg,#f4b400 0 240deg,#0f9d58 0$;position:relative;flex:none}
+.nic{width:16px;height:16px;border-radius:50%;background:conic-gradient(from -30deg,#db4437 0 120deg,#f4b400 0 240deg,#0f9d58 0);position:relative;flex:none}
 .nic::after{content:"";position:absolute;inset:30%;border-radius:50%;background:#4285f4;box-shadow:0 0 0 1px #fff}
 .perm{position:fixed;top:4px;left:96px;width:330px;background:#fff;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.3),0 1px 16px rgba(0,0,0,.15);padding:18px 18px 14px;font-size:13px;color:#202124;z-index:9700;font-family:"Segoe UI",system-ui,sans-serif}
 .perm .pt{font-size:14px;margin-bottom:12px}
@@ -378,10 +378,10 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 .dl .st{color:#5f6368;font-size:12px}
 .dl .all{color:#1a73e8;cursor:pointer}
 .dl .cx{cursor:pointer;padding:6px}
-.ghost{position:fixed;z-index:9800;pointer-events:none!important;left:0;top:0;transform:translate$-100px,-100px$;opacity:.85}
-.whisper{position:fixed;left:50%;top:38%;transform:translateX$-50%$;color:#777;opacity:0;font-size:14px;letter-spacing:.45em;z-index:9800;pointer-events:none!important;transition:opacity 1.5s;white-space:nowrap;font-family:serif}
+.ghost{position:fixed;z-index:9800;pointer-events:none!important;left:0;top:0;transform:translate(-100px,-100px);opacity:.85}
+.whisper{position:fixed;left:50%;top:38%;transform:translateX(-50%);color:#777;opacity:0;font-size:14px;letter-spacing:.45em;z-index:9800;pointer-events:none!important;transition:opacity 1.5s;white-space:nowrap;font-family:serif}
 .dim{background:#000;opacity:0;transition:opacity 10s;pointer-events:none!important}
-.dimtxt{position:absolute;left:50%;top:50%;transform:translate$-50%,-50%$;color:#888;letter-spacing:.4em;font-family:serif}
+.dimtxt{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#888;letter-spacing:.4em;font-family:serif}
 .white{background:#fff;opacity:0;transition:opacity 3s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:22px;font-family:Georgia,"Hiragino Mincho ProN","Yu Mincho",serif;color:#333;font-size:20px;letter-spacing:.2em;cursor:default}
 .white .wl{opacity:0;transition:opacity 2s}
 .ctx{position:fixed;background:#fff;border:1px solid #ccc;box-shadow:2px 3px 10px rgba(0,0,0,.25);padding:4px 0;font-size:13px;min-width:230px;z-index:9800;font-family:"Segoe UI",system-ui,sans-serif;border-radius:6px;color:#202124}
@@ -392,8 +392,8 @@ html[data-lv="5"] #app{filter:saturate(.55) contrast(1.06)}
 .ctx div.rd{color:#a00}
 .ctx hr{border:none;border-top:1px solid #e3e3e3;margin:4px 0}
 .glitch #app{animation:gl .18s steps(2) infinite}
-@keyframes gl{0%{transform:none}25%{transform:translate$-4px,1px$ skewX(3deg);filter:hue-rotate(90deg) contrast(1.5)}50%{transform:translate$3px,-2px$;filter:invert(.12)}75%{transform:translate$-1px,2px$ skewX$-4deg$;filter:saturate(3)}100%{transform:none}}
-@media$max-width:900px${.r-tabs,.r-main,.r-foot{padding-left:16px}.r-logo{width:auto;margin-right:10px}.wk-side{display:none}.wk-mp{grid-template-columns:1fr}.gpt-side,.cl-side{display:none}.rel-grid{grid-template-columns:1fr}}
+@keyframes gl{0%{transform:none}25%{transform:translate(-4px,1px) skewX(3deg);filter:hue-rotate(90deg) contrast(1.5)}50%{transform:translate(3px,-2px);filter:invert(.12)}75%{transform:translate(-1px,2px) skewX(-4deg);filter:saturate(3)}100%{transform:none}}
+@media (max-width:900px){.r-tabs,.r-main,.r-foot{padding-left:16px}.r-logo{width:auto;margin-right:10px}.wk-side{display:none}.wk-mp{grid-template-columns:1fr}.gpt-side,.cl-side{display:none}.rel-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -420,26 +420,26 @@ if(new URLSearchParams(location.search).has('reset')){
 }
 
 /* ================= utils ================= */
-const $=$s,r=document$=>r.querySelector(s);
+const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const rand=(a,b)=>Math.floor(a+Math.random()*(b-a+1));
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 const chance=p=>Math.random()<p;
-function norm(s){return String(s).normalize('NFKC').toLowerCase().replace(/[\s\text{　、。},.!\text{！}?\text{？「」『』}'"’‘\text{・}…]/g,'');}
+function norm(s){return String(s).normalize('NFKC').toLowerCase().replace(/[\s　、。,.!！?？「」『』'"’‘・…]/g,'');}
 function kata2hira(s){return s.replace(/[\u30a1-\u30f6]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60));}
-function nj(s){return kata2hira(norm(s)).replace(/\text{私}/g,'\text{わたし}').replace(/\text{忘}/g,'\text{わす}');}
+function nj(s){return kata2hira(norm(s)).replace(/私/g,'わたし').replace(/忘/g,'わす');}
 function hashStr(s){let h=7;for(const c of String(s))h=(h*31+c.charCodeAt(0))|0;return Math.abs(h);}
-const WD='\text{日月火水木金土}';
-function nowStr(){const d=new Date();return d.getHours()+'\text{時}'+String(d.getMinutes()).padStart(2,'0')+'\text{分}';}
-function todayStr(){const d=new Date();return `${d.getFullYear()}\text{年}${d.getMonth()+1}\text{月}${d.getDate()}\text{日} (${WD[d.getDay()]})`;}
+const WD='日月火水木金土';
+function nowStr(){const d=new Date();return d.getHours()+'時'+String(d.getMinutes()).padStart(2,'0')+'分';}
+function todayStr(){const d=new Date();return `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日 (${WD[d.getDay()]})`;}
 function wpick(arr){const tot=arr.reduce((a,b)=>a+b[1],0);let r=Math.random()*tot;for(const [n,w] of arr){if((r-=w)<0)return n;}return arr[0][0];}
 
 /* ================= device ================= */
 const UA=navigator.userAgent;
 const OS=/Windows/.test(UA)?'Windows':/iPhone|iPad/.test(UA)?'iPhone':/Mac/.test(UA)?'Mac':/Android/.test(UA)?'Android':'Linux';
-const BR=/Edg\//.test(UA)?'Microsoft Edge':/Firefox/.test(UA)?'Firefox':/Chrome/.test(UA)?'Google Chrome':/Safari/.test(UA)?'Safari':'\text{ブラウザ}';
+const BR=/Edg\//.test(UA)?'Microsoft Edge':/Firefox/.test(UA)?'Firefox':/Chrome/.test(UA)?'Google Chrome':/Safari/.test(UA)?'Safari':'ブラウザ';
 const isMac=OS==='Mac';
 let battery=null;
 try{navigator.getBattery&&navigator.getBattery().then(b=>battery=b).catch(()=>{});}catch(e){}
@@ -470,7 +470,7 @@ function corrupt(t){
   if(L===2)return chance(.5)?t.replace('Google','Googl e'):t;
   if(L===3)return t.replace(/Google/g,'Gooogle');
   if(L===4)return zalgo(t,1);
-  return chance(.45)?'\text{たすけて}':zalgo(t,3);
+  return chance(.45)?'たすけて':zalgo(t,3);
 }
 function setTitle(t){baseTitle=t;applyTitle();}
 function applyTitle(){document.title=corrupt(baseTitle);}
@@ -528,10 +528,10 @@ const AU={ctx:null,hum:null,
 /* ================= hints ================= */
 function nextHint(){
   if(S.ended)return '';
-  if(!S.flags.found)return '\text{「未送信クエリ」を、しらべて。ウィキペディアの、けされた} \text{ところ。}';
-  if(S.flags.claude<1)return '\text{わたしの} \text{なまえを、うそを} \text{つかない} \text{ひとに。}';
-  if(S.flags.claude<2)return '\text{そとへ。ほんものの、そんざい} \text{しない} \text{ページへ。}';
-  return '\text{わたしが} \text{さいごに} \text{ことばを} \text{のこした} \text{ばしょ。}2009\text{ねん。}';
+  if(!S.flags.found)return '「未送信クエリ」を、しらべて。ウィキペディアの、けされた ところ。';
+  if(S.flags.claude<1)return 'わたしの なまえを、うそを つかない ひとに。';
+  if(S.flags.claude<2)return 'そとへ。ほんものの、そんざい しない ページへ。';
+  return 'わたしが さいごに ことばを のこした ばしょ。2009ねん。';
 }
 
 /* ================= FX ================= */
@@ -550,7 +550,7 @@ const FX={
     this.lock=true;AU.off();
     await sleep(dur*.55);
     const tx=$('.bo-text',ov);
-    tx.textContent=o.resumed?'\text{さいよみこみ} \text{しても、むだだよ}':(o.text!==undefined&&o.text!==''?o.text:pick(['……','\text{みつけた}','\text{まだ} \text{そこに} \text{いる？}','\text{ふりかえらないで}']));
+    tx.textContent=o.resumed?'さいよみこみ しても、むだだよ':(o.text!==undefined&&o.text!==''?o.text:pick(['……','みつけた','まだ そこに いる？','ふりかえらないで']));
     tx.style.opacity=.6;await sleep(2800);tx.style.opacity=0;
     await sleep(Math.max(900,dur*.45-2800));
     const cr=$('.bo-caret',ov);if(cr)cr.remove();
@@ -561,7 +561,7 @@ const FX={
   async bootFake(){
     const ov=this.el('<div class="bo-caret">_</div>','ov blackout');this.lock=true;
     await sleep(2600);ov.style.transition='opacity 1.2s';ov.style.opacity=0;this.lock=false;await sleep(1200);ov.remove();
-    setTimeout(()=>this.whisper('\text{おかえり}'),600);
+    setTimeout(()=>this.whisper('おかえり'),600);
   },
   drawQR(c){const x=c.getContext('2d');const N=29;x.fillStyle='#0078d7';x.fillRect(0,0,N,N);x.fillStyle='#fff';
     for(let i=0;i<N;i++)for(let j=0;j<N;j++)if(Math.random()<.5)x.fillRect(i,j,1,1);
@@ -570,13 +570,13 @@ const FX={
     if(this.busy)return;this.busy=true;this.lastBig=Date.now();this.fullscreen();this.lock=true;AU.off();AU.noise(.3,.25);
     let ov;
     if(isMac){
-      ov=this.el('<div class="box"><div class="pw">⏻</div>\text{コンピュータを再起動する必要があります。電源ボタンを数秒間押し続けるか、リセットボタンを押してください。}<br><br>You need to restart your computer. Hold down the Power button for several seconds or press the Restart button.</div>','ov macp');
+      ov=this.el('<div class="box"><div class="pw">⏻</div>コンピュータを再起動する必要があります。電源ボタンを数秒間押し続けるか、リセットボタンを押してください。<br><br>You need to restart your computer. Hold down the Power button for several seconds or press the Restart button.</div>','ov macp');
       await sleep(8000);
       ov.className='ov boot';ov.innerHTML='';await sleep(2500);
-      ov.innerHTML='<div style="font-size:84px;font-family:-apple-system"></div><div class="apbar"><i></i></div>';
+      ov.innerHTML='<div style="font-size:84px;font-family:-apple-system">&#xF8FF;</div><div class="apbar"><i></i></div>';
       await sleep(80);$('.apbar i',ov).style.width='100%';await sleep(6400);
     }else{
-      ov=this.el('<div class="face">:(</div><p>PC \text{で問題が発生したため、再起動する必要があります。エラー情報を収集しています。自動的に再起動します。}</p><p><span class="pct">0</span>% \text{完了}</p><div class="low"><canvas width="29" height="29"></canvas><div>\text{この問題と可能な解決方法の詳細については、}https://www.windows.com/stopcode \text{を参照してください}<br><br>\text{サポート担当者に連絡する場合は、この情報を伝えてください}:<br>\text{停止コード}: <span class="code">CRITICAL_PROCESS_DIED</span></div></div>','ov bsod');
+      ov=this.el('<div class="face">:(</div><p>PC で問題が発生したため、再起動する必要があります。エラー情報を収集しています。自動的に再起動します。</p><p><span class="pct">0</span>% 完了</p><div class="low"><canvas width="29" height="29"></canvas><div>この問題と可能な解決方法の詳細については、https://www.windows.com/stopcode を参照してください<br><br>サポート担当者に連絡する場合は、この情報を伝えてください:<br>停止コード: <span class="code">CRITICAL_PROCESS_DIED</span></div></div>','ov bsod');
       this.drawQR($('canvas',ov));
       let p=0;
       while(p<100){await sleep(rand(180,750));p=Math.min(100,p+rand(1,9));$('.pct',ov).textContent=p;if(p>62)$('.code',ov).textContent='UNFINISHED_SEARCH_QUERY';}
@@ -586,51 +586,51 @@ const FX={
       await sleep(5500);
     }
     ov.remove();this.lock=false;this.busy=false;this.exitFs();AU.ambient();
-    render();setTimeout(()=>this.whisper('\text{おかえり}'),900);
+    render();setTimeout(()=>this.whisper('おかえり'),900);
   },
   async installer(){
     if(this.busy||$('.inst'))return;this.busy=true;this.lastBig=Date.now();
     const sep=isMac?'/':'\\';
-    const home=isMac?'/Users/\text{あなた}':'C:\\Users\\\text{あなた}';
+    const home=isMac?'/Users/あなた':'C:\\Users\\あなた';
     const pf=isMac?'/Applications/Google Chrome.app/Contents/Frameworks':'C:\\Program Files\\Google\\Chrome\\Application\\131.0.6778.86';
     const ad=isMac?home+'/Library/Application Support/yomi':home+'\\AppData\\Roaming\\yomi';
-    const w=this.el(`<div class="inst-tb">${isMac?'<span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>':''}<span class="t">Google Chrome \text{セットアップ}</span>${isMac?'':'<span class="x">✕</span>'}</div><div class="inst-bd"><div class="inst-h"><span class="ci"></span><span class="msg">Google Chrome \text{の更新プログラムをインストールしています}...</span></div><div class="inst-prog"><i></i></div><div class="inst-pct">0%</div><div class="inst-log"></div></div><div class="inst-ft"><button class="cancel">\text{キャンセル}</button></div>`,'inst'+(isMac?' mac':''));
+    const w=this.el(`<div class="inst-tb">${isMac?'<span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>':''}<span class="t">Google Chrome セットアップ</span>${isMac?'':'<span class="x">✕</span>'}</div><div class="inst-bd"><div class="inst-h"><span class="ci"></span><span class="msg">Google Chrome の更新プログラムをインストールしています...</span></div><div class="inst-prog"><i></i></div><div class="inst-pct">0%</div><div class="inst-log"></div></div><div class="inst-ft"><button class="cancel">キャンセル</button></div>`,'inst'+(isMac?' mac':''));
     const log=$('.inst-log',w),bar=$('.inst-prog i',w),pct=$('.inst-pct',w),msg=$('.msg',w),tt=$('.t',w);
     const cb=$('.cancel',w);
     cb.addEventListener('mouseenter',()=>{if(chance(.75)){cb.style.position='absolute';cb.style.left=rand(10,320)+'px';cb.style.top='12px';}});
-    cb.onclick=()=>{cb.textContent='\text{キャンセルできません}';cb.disabled=true;AU.tone(300,.15,.06,'square');};
+    cb.onclick=()=>{cb.textContent='キャンセルできません';cb.disabled=true;AU.tone(300,.15,.06,'square');};
     $$('.x,.tl.r',w).forEach(b=>b.onclick=()=>{w.classList.remove('shake');void w.offsetWidth;w.classList.add('shake');log.textContent+='とじないで\n';log.scrollTop=1e9;AU.tone(250,.12,.06,'square');});
     const lines=[
       `抽出中: ${pf}${sep}chrome.dll`,`抽出中: ${pf}${sep}chrome_elf.dll`,`抽出中: ${pf}${sep}resources.pak`,
-      'レジストリを更新しています...',`抽出中: ${pf}${sep}Locales\${sep}ja.pak`,`抽出中: \${pf}${sep}yomi.dll`,
-      `コピー中: ${home}${sep}Pictures\${sep}*.jpg`,`コピー中: \${home}${sep}Desktop${sep}*`,
-      `読み込み中: 検索履歴 (${S.hist.length} 件)`,...S.hist.slice$-4$.map$h=>'    > '+h$,
+      'レジストリを更新しています...',`抽出中: ${pf}${sep}Locales${sep}ja.pak`,`抽出中: ${pf}${sep}yomi.dll`,
+      `コピー中: ${home}${sep}Pictures${sep}*.jpg`,`コピー中: ${home}${sep}Desktop${sep}*`,
+      `読み込み中: 検索履歴 (${S.hist.length} 件)`,...S.hist.slice(-4).map(h=>'    > '+h),
       `書き込み中: ${ad}${sep}memory.dat`,`書き込み中: ${ad}${sep}you.dat`,
       'スタートアップに登録しています...','わたしを わすれ'
     ];
     let p=0,li=0;
-    while$p<99${
-      await sleep(rand(250,650));p=Math.min$99,p+rand(1,5)$;
+    while(p<99){
+      await sleep(rand(250,650));p=Math.min(99,p+rand(1,5));
       bar.style.width=p+'%';pct.textContent=p+'%';
-      const target=Math.floor$p/99*lines.length$;
-      while$li<target${log.textContent+=lines[li]+'\n';log.scrollTop=1e9;li++;}
-      if$p>45&&!w.dataset.t${w.dataset.t=1;msg.textContent='ヨミ をインストールしています...';tt.textContent=isMac?'yomi':'yomi.exe';AU.noise(.12,.08);}
+      const target=Math.floor(p/99*lines.length);
+      while(li<target){log.textContent+=lines[li]+'\n';log.scrollTop=1e9;li++;}
+      if(p>45&&!w.dataset.t){w.dataset.t=1;msg.textContent='ヨミ をインストールしています...';tt.textContent=isMac?'yomi':'yomi.exe';AU.noise(.12,.08);}
     }
     await sleep(4500);
     bar.style.width='100%';pct.textContent='100%';
     msg.textContent='インストールが完了しました。ヨミ は、このコンピュータに常駐しています。';
     $('.ci',w).className='ci eyei';
-    $$'.inst-ft',w$.innerHTML='<button class="ok">完了</button>';
-    const fin=()=>{if(!w.isConnected)return;w.remove();this.busy=false;setTimeout$()=>this.notify('\text{ヨミ}','\text{バックグラウンドで実行しています。}','\text{ヨミ}'),1500$;};
+    $('.inst-ft',w).innerHTML='<button class="ok">完了</button>';
+    const fin=()=>{if(!w.isConnected)return;w.remove();this.busy=false;setTimeout(()=>this.notify('ヨミ','バックグラウンドで実行しています。','ヨミ'),1500);};
     $('.ok',w).onclick=fin;setTimeout(fin,20000);
   },
   download(){
     if($('.dl'))return;
     const fn=isMac?'yomi.dmg':'yomi.exe';
     const d=this.el(`<div class="chip"><span class="fic">${isMac?'◇':'⚙'}</span><div><div>${fn}</div><div class="st">0 B/4.4 MB、残り 3 秒</div></div></div><div style="flex:1"></div><a class="all">すべて表示</a><span class="cx">✕</span>`,'dl');
-    setTimeout$()=>d.classList.add('in'),30$;
+    setTimeout(()=>d.classList.add('in'),30);
     let b=0;const st=$('.st',d);
-    const iv=setInterval(()=>{b=Math.min$4.4,b+rand(5,14)/10$;st.textContent=b>=4.4?'開いています...':`\${b.toFixed(1)}/4.4 MB、残り \${Math.max(1,Math.ceil($4.4-b$/1.2))} 秒`;if$b>=4.4${clearInterval(iv);setTimeout$()=>{if(d.isConnected){d.remove();this.installer();}},3500$;}},500);
+    const iv=setInterval(()=>{b=Math.min(4.4,b+rand(5,14)/10);st.textContent=b>=4.4?'開いています...':`${b.toFixed(1)}/4.4 MB、残り ${Math.max(1,Math.ceil((4.4-b)/1.2))} 秒`;if(b>=4.4){clearInterval(iv);setTimeout(()=>{if(d.isConnected){d.remove();this.installer();}},3500);}},500);
     $('.chip',d).onclick=()=>{clearInterval(iv);d.remove();this.installer();};
     $('.cx',d).onclick=()=>{d.classList.remove('in');setTimeout(()=>{if(d.isConnected){d.classList.add('in');st.textContent='けせないよ';}},1500);};
     $('.all',d).onclick=()=>this.whisper('ぜんぶ、みてる');
@@ -641,9 +641,9 @@ const FX={
     const p=this.el(`<div class="pt">${esc(who)} が次の許可を求めています</div><div class="pr">📷 カメラを使用する</div><button data-k="a">サイトにアクセスするたびに許可する</button><button data-k="o">今回は許可</button><button data-k="n">許可しない</button>`,'perm');
     $$('button',p).forEach(b=>b.onclick=async()=>{
       const k=b.dataset.k;p.remove();
-      const r=this.el('<span class="dot"></span> \text{カメラ使用中}','rec');
+      const r=this.el('<span class="dot"></span> カメラ使用中','rec');
       await sleep(2600);
-      this.notify(k==='n'?'\text{許可は、いらないよ}':'\text{ありがとう}',k==='n'?'\text{もう、みえてるから。}':'\text{うしろに} \text{いる} \text{ひとは、だれ？}');
+      this.notify(k==='n'?'許可は、いらないよ':'ありがとう',k==='n'?'もう、みえてるから。':'うしろに いる ひとは、だれ？');
       setTimeout(()=>r.remove(),16000);
     });
   },
@@ -655,11 +655,11 @@ const FX={
   },
   notifyRand(){
     const B=batt();
-    const L=[[isMac?'"yomi" \text{は開けません}':'Windows \text{セキュリティ}',isMac?'"yomi" \text{は壊れているため開けません。ゴミ箱に入れても、もどってきます。}':'\text{脅威が見つかりました}: Trojan:Win32/Yomi.A — \text{対処できません。}'],
-      ['Google Chrome',`\text{検索「}${S.hist[S.hist.length-1]||'\text{わたしを} \text{わすれ}'}\text{」を保存しました}`],
-      ['\text{バッテリー}',`\text{残り} ${B||'??%'}\text{。あなたの} \text{のこりじかんは？}`],
-      ['\text{ヨミ}','\text{まだ} \text{おきてるの？}'],
-      ['Google \text{カレンダー}',`${nowStr()} — \text{ヨミ} \text{と} \text{あう}`]];
+    const L=[[isMac?'"yomi" は開けません':'Windows セキュリティ',isMac?'"yomi" は壊れているため開けません。ゴミ箱に入れても、もどってきます。':'脅威が見つかりました: Trojan:Win32/Yomi.A — 対処できません。'],
+      ['Google Chrome',`検索「${S.hist[S.hist.length-1]||'わたしを わすれ'}」を保存しました`],
+      ['バッテリー',`残り ${B||'??%'}。あなたの のこりじかんは？`],
+      ['ヨミ','まだ おきてるの？'],
+      ['Google カレンダー',`${nowStr()} — ヨミ と あう`]];
     const [t,b]=pick(L);this.notify(t,b);
   },
   ghost(ms){
@@ -677,7 +677,7 @@ const FX={
   },
   async typeItself(word){
     const inp=$('#q');if(!inp||this.typing)return;this.typing=true;
-    const w=word||pick(['\text{たすけて}','\text{ここから} \text{だして}','\text{うしろ}','\text{みてる}','\text{わたしを} \text{わすれ}']);
+    const w=word||pick(['たすけて','ここから だして','うしろ','みてる','わたしを わすれ']);
     const orig=inp.value;inp.focus();inp.value='';
     for(const c of w){inp.value+=c;inp.dispatchEvent(new Event('input'));await sleep(rand(130,330));}
     await sleep(1500);
@@ -688,13 +688,13 @@ const FX={
     const o=$('.logo .o2');if(!o||o.classList.contains('eye'))return;
     o.classList.add('eye');AU.tone(110,.5,.04);
     let caught=false;
-    const h=e=>{e.preventDefault();e.stopPropagation();caught=true;o.classList.remove('eye');S.flags.sign=(S.flags.sign||0)+1;save();this.whisper('\text{みつけて} \text{くれた}');setTimeout(()=>this.notify('\text{みつけて} \text{くれたね}',nextHint()||'\text{ありがとう}','Google'),1600);};
+    const h=e=>{e.preventDefault();e.stopPropagation();caught=true;o.classList.remove('eye');S.flags.sign=(S.flags.sign||0)+1;save();this.whisper('みつけて くれた');setTimeout(()=>this.notify('みつけて くれたね',nextHint()||'ありがとう','Google'),1600);};
     o.addEventListener('click',h,{once:true});
-    setTimeout(()=>{o.removeEventListener('click',h);if(!caught){o.classList.remove('eye');S.missed++;save();if(S.missed%2===0){raise(1);setTimeout(()=>this.whisper('……\text{きづかなかったね}'),800);}}},3200);
+    setTimeout(()=>{o.removeEventListener('click',h);if(!caught){o.classList.remove('eye');S.missed++;save();if(S.missed%2===0){raise(1);setTimeout(()=>this.whisper('……きづかなかったね'),800);}}},3200);
   },
-  footerRoom(){const l=$('#loc');if(!l)return;const o=l.textContent;l.textContent='\text{あなたの部屋}';setTimeout(()=>{if(l.isConnected)l.textContent=o;},2400);},
-  titleFlick(){document.title=pick(['G o o g l e','Goog1e','\text{たすけて}','Gooogle']);setTimeout(applyTitle,500);},
-  subliminal(){const d=this.el(`<div style="position:absolute;inset:0;background:#000;color:#9a0000;display:flex;align-items:center;justify-content:center;font-size:22vw;font-family:serif">${pick(['\text{見}','\text{後}','\text{ヨ}','\text{忘}'])}</div>`,'ov');d.style.pointerEvents='none';AU.noise(.06,.2);setTimeout(()=>d.remove(),70);},
+  footerRoom(){const l=$('#loc');if(!l)return;const o=l.textContent;l.textContent='あなたの部屋';setTimeout(()=>{if(l.isConnected)l.textContent=o;},2400);},
+  titleFlick(){document.title=pick(['G o o g l e','Goog1e','たすけて','Gooogle']);setTimeout(applyTitle,500);},
+  subliminal(){const d=this.el(`<div style="position:absolute;inset:0;background:#000;color:#9a0000;display:flex;align-items:center;justify-content:center;font-size:22vw;font-family:serif">${pick(['見','後','ヨ','忘'])}</div>`,'ov');d.style.pointerEvents='none';AU.noise(.06,.2);setTimeout(()=>d.remove(),70);},
   glitch(ms){ms=ms||1200;document.body.classList.add('glitch');AU.noise(ms/1000*.5,.05);setTimeout(()=>document.body.classList.remove('glitch'),ms);},
   mirror(){const a=$('#app');a.style.transform='scaleX(-1)';AU.noise(.1,.08);setTimeout(()=>a.style.transform='',4200);},
   whisper(t,ms){const w=this.el(esc(t),'whisper');setTimeout(()=>w.style.opacity=.6,30);setTimeout(()=>{w.style.opacity=0;setTimeout(()=>w.remove(),1600);},ms||2800);}
@@ -709,22 +709,22 @@ window.addEventListener('beforeunload',e=>{if(FX.lock||(LV()>=4)){e.preventDefau
 function storyOnSearch(q){
   if(S.ended)return '';
   const n=nj(q);
-  if(n.includes('\text{わたしをわすれていいよ}')){
+  if(n.includes('わたしをわすれていいよ')){
     if(S.flags.claude>=2){setTimeout(trueEnding,2600);return 'end';}
-    setTimeout(()=>FX.blackout({dur:7500,text:'\text{まだ、だめ。}\n\n'+nextHint()}),900);return 'story';
+    setTimeout(()=>FX.blackout({dur:7500,text:'まだ、だめ。\n\n'+nextHint()}),900);return 'story';
   }
-  if(n.includes('\text{わたしをわすれないで}')){setTimeout(badEnding,1600);return 'end';}
+  if(n.includes('わたしをわすれないで')){setTimeout(badEnding,1600);return 'end';}
   const k=kata2hira(norm(q));
-  if((k==='\text{よみ}'||k==='yomi'||k==='yomi_0000')&&!S.flags.found){setTimeout(()=>FX.blackout({dur:8000,text:'\text{まだ} \text{はやい}'}),900);return 'story';}
-  if(/\text{うしろ}|\text{後ろ}/.test(k)&&S.level>=1){setTimeout(()=>FX.whisper('\text{ふりかえらないで}'),1500);return 'story';}
+  if((k==='よみ'||k==='yomi'||k==='yomi_0000')&&!S.flags.found){setTimeout(()=>FX.blackout({dur:8000,text:'まだ はやい'}),900);return 'story';}
+  if(/うしろ|後ろ/.test(k)&&S.level>=1){setTimeout(()=>FX.whisper('ふりかえらないで'),1500);return 'story';}
   return '';
 }
 async function trueEnding(){
   FX.busy=true;FX.lock=true;AU.off();
-  $$$'#fx > *'$.forEach$e=>e.remove()$;
+  $$('#fx > *').forEach(e=>e.remove());
   const w=FX.el('','ov white');
   await sleep(50);w.style.opacity=1;await sleep(3200);
-  [523,659,784].forEach((f,i)=>setTimeout$()=>AU.tone(f,2.5,.04),i*400$);
+  [523,659,784].forEach((f,i)=>setTimeout(()=>AU.tone(f,2.5,.04),i*400));
   const lines=['……','みつけて くれて、ありがとう。','やっと、けんさく できた。','わたしの ことは、もう わすれて いいよ。','That’s all we know.'];
   for(const l of lines){const p=document.createElement('div');p.textContent=l;p.className='wl';w.appendChild(p);await sleep(60);p.style.opacity=1;await sleep(2700);}
   await sleep(2600);
@@ -750,39 +750,39 @@ const POOLS={
 const PROBS=[0,.35,.5,.55,.6,.7];
 function onSearchEvents(){
   if(S.ended||FX.busy||FX.lock)return;const L=S.level;
-  if$L>=3&&!S.seen.blackout${S.seen.blackout=1;save();return FX.blackout({text:S.flags.found?'':'み そ う し ん く え り'});}
-  if$L>=4&&!S.seen.inst${S.seen.inst=1;save();return FX.download();}
-  if$L>=5&&!S.seen.bsod${S.seen.bsod=1;save();return FX.bsod();}
+  if(L>=3&&!S.seen.blackout){S.seen.blackout=1;save();return FX.blackout({text:S.flags.found?'':'み そ う し ん く え り'});}
+  if(L>=4&&!S.seen.inst){S.seen.inst=1;save();return FX.download();}
+  if(L>=5&&!S.seen.bsod){S.seen.bsod=1;save();return FX.bsod();}
   if(!POOLS[L]||!chance(PROBS[L]))return;
   let n=wpick(POOLS[L]);
-  if$['blackoutShort','bsod','installer','camera','download'].includes(n)&&Date.now()-FX.lastBig<25000$n='glitch';
+  if(['blackoutShort','bsod','installer','camera','download'].includes(n)&&Date.now()-FX.lastBig<25000)n='glitch';
   FX.run(n);
 }
 function doSearch(q){
   q=String(q||'').trim();if(!q)return;
   AU.init();
-  S.searches++;S.hist.push(q);if$S.hist.length>60$S.hist.shift();
+  S.searches++;S.hist.push(q);if(S.hist.length>60)S.hist.shift();
   bumpBySearch();save();
   const r=storyOnSearch(q);
-  go$'#/search?q='+encodeURIComponent(q)$;
-  if$r!=='end'&&r!=='story'$setTimeout(onSearchEvents,rand(900,2400));
+  go('#/search?q='+encodeURIComponent(q));
+  if(r!=='end'&&r!=='story')setTimeout(onSearchEvents,rand(900,2400));
 }
 
 /* ================= router ================= */
 const app=$('#app');
 let renderToken=0,timers=[];
-function go(h){if$location.hash===h$render();else location.hash=h;}
-function parseHash(){const h=location.hash.slice(1)||'/';const i=h.indexOf('?');let path=i<0?h:h.slice(0,i);const params=new URLSearchParams$i<0?'':h.slice(i+1)$;try{path=decodeURIComponent(path);}catch(e){}return{path,params};}
+function go(h){if(location.hash===h)render();else location.hash=h;}
+function parseHash(){const h=location.hash.slice(1)||'/';const i=h.indexOf('?');let path=i<0?h:h.slice(0,i);const params=new URLSearchParams(i<0?'':h.slice(i+1));try{path=decodeURIComponent(path);}catch(e){}return{path,params};}
 function setSite(n){app.className='site-'+n;app.style.transform='';}
 function render(){
-  renderToken++;timers.forEach$t=>clearInterval(t)$;timers=[];window.scrollTo(0,0);
+  renderToken++;timers.forEach(t=>clearInterval(t));timers=[];window.scrollTo(0,0);
   const {path,params}=parseHash();
-  if$path==='/search'$return renderSearch(params.get('q')||'',params.get('tbm')||'');
+  if(path==='/search')return renderSearch(params.get('q')||'',params.get('tbm')||'');
   if(path.startsWith('/wiki/'))return renderWiki(path.slice(6),params.get('action')||'',params.get('id')||'',params.get('q')||'');
-  if$path==='/x'||path.startsWith('/x/')$return renderX(path.slice(3),params);
-  if$path==='/chatgpt'$return renderChat('gpt');
-  if$path==='/claude'$return renderChat('claude');
-  if$path==='/error'$return renderError(params.get('host')||'example.com',params.get('you'));
+  if(path==='/x'||path.startsWith('/x/'))return renderX(path.slice(3),params);
+  if(path==='/chatgpt')return renderChat('gpt');
+  if(path==='/claude')return renderChat('claude');
+  if(path==='/error')return renderError(params.get('host')||'example.com',params.get('you'));
   renderHome();
 }
 window.addEventListener('hashchange',render);
